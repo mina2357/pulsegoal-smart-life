@@ -11,6 +11,9 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import com.pulsegoal.R;
 import com.pulsegoal.ml.MLMock;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 public class HomeFragment extends Fragment {
 
@@ -25,10 +28,28 @@ public class HomeFragment extends Fragment {
         TextView goalBrief = view.findViewById(R.id.goal_brief);
         TextView mlSuggestion = view.findViewById(R.id.ml_suggestion);
 
-        helloUser.setText("Welcome to PulseGoal!");
-        goalBrief.setText("You have 3 goals in progress."); // This could be LiveData later
+        // Dynamic welcome message based on time of day
+        String timeOfDay = getTimeOfDay();
+        helloUser.setText("Good " + timeOfDay + "!");
+        
+        // Dynamic goal brief - could be connected to actual data later
+        int activeGoals = 3; // This would come from ViewModel/Repository in real app
+        goalBrief.setText("You have " + activeGoals + " active goals");
+        
+        // Get AI suggestion from mock ML service
         mlSuggestion.setText(MLMock.getSuggestion());
 
         return view;
+    }
+
+    private String getTimeOfDay() {
+        int hour = Integer.parseInt(new SimpleDateFormat("HH", Locale.getDefault()).format(new Date()));
+        if (hour < 12) {
+            return "morning";
+        } else if (hour < 17) {
+            return "afternoon";
+        } else {
+            return "evening";
+        }
     }
 }
