@@ -1,4 +1,3 @@
-
 import React from "react";
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
@@ -219,7 +218,7 @@ function MainPage() {
               aria-current={isActive ? "page" : undefined}
               onClick={() => setActiveSection(item.section as "home" | "goals" | "account")}
             >
-              <IconComp />
+              <IconComp className="mb-0.5" />
               <span className="mt-1">{item.label}</span>
             </Button>
           );
@@ -237,4 +236,3 @@ const Index = () => (
 );
 
 export default Index;
-
