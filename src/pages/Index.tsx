@@ -1,8 +1,9 @@
+
 import React from "react";
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Card, CardContent } from "@/components/ui/card";
-import { Info, BarChart, CheckCircle, User } from "lucide-react";
+import { Info, PieChart, Check, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 // Example data for demo UI
@@ -10,15 +11,15 @@ const data = {
   en: {
     title: "PulseGoal Smart Life",
     stats: [
-      { icon: <CheckCircle className="text-green-600" />, label: "Goals Completed", value: "12 / 15" },
-      { icon: <BarChart className="text-blue-600" />, label: "Weekly Progress", value: "80%" },
+      { icon: <Check className="text-green-600" />, label: "Goals Completed", value: "12 / 15" },
+      { icon: <PieChart className="text-blue-600" />, label: "Weekly Progress", value: "80%" },
       { icon: <User className="text-yellow-600" />, label: "Signed-in as", value: "User" },
     ],
     aiTip: "Small achievements add up! Keep going.",
     about: "About PulseGoal: Effortless goal tracking and smart suggestions, designed to enhance your daily routine.",
     bottomNav: [
-      { icon: BarChart, label: "Home", section: "home" },
-      { icon: CheckCircle, label: "Goals", section: "goals" },
+      { icon: PieChart, label: "Home", section: "home" },
+      { icon: Check, label: "Goals", section: "goals" },
       { icon: User, label: "Account", section: "account" },
     ],
     // Section contents for each tab
@@ -28,8 +29,8 @@ const data = {
           <h1 className="text-3xl font-bold mb-4 text-left">PulseGoal Smart Life</h1>
           <div className="flex flex-col gap-4 w-full mb-6">
             {[
-              { icon: <CheckCircle className="text-green-600" />, label: "Goals Completed", value: "12 / 15" },
-              { icon: <BarChart className="text-blue-600" />, label: "Weekly Progress", value: "80%" },
+              { icon: <Check className="text-green-600" />, label: "Goals Completed", value: "12 / 15" },
+              { icon: <PieChart className="text-blue-600" />, label: "Weekly Progress", value: "80%" },
               { icon: <User className="text-yellow-600" />, label: "Signed-in as", value: "User" },
             ].map((stat, i) => (
               <Card key={i} className="p-0 flex flex-row items-center gap-4">
@@ -93,15 +94,15 @@ const data = {
   ar: {
     title: "حياة ذكية مع PulseGoal",
     stats: [
-      { icon: <CheckCircle className="text-green-600" />, label: "الأهداف المكتملة", value: "١٢ من ١٥" },
-      { icon: <BarChart className="text-blue-600" />, label: "تقدم الأسبوع", value: "٨٠٪" },
+      { icon: <Check className="text-green-600" />, label: "الأهداف المكتملة", value: "١٢ من ١٥" },
+      { icon: <PieChart className="text-blue-600" />, label: "تقدم الأسبوع", value: "٨٠٪" },
       { icon: <User className="text-yellow-600" />, label: "المستخدم", value: "مستخدم" },
     ],
     aiTip: "الإنجازات الصغيرة تصنع الفارق! استمر.",
     about: "حول PulseGoal: تتبع الأهداف واقتراحات ذكية بسهولة لتعزيز روتينك اليومي.",
     bottomNav: [
-      { icon: BarChart, label: "الرئيسية", section: "home" },
-      { icon: CheckCircle, label: "الأهداف", section: "goals" },
+      { icon: PieChart, label: "الرئيسية", section: "home" },
+      { icon: Check, label: "الأهداف", section: "goals" },
       { icon: User, label: "الحساب", section: "account" },
     ],
     sections: {
@@ -110,8 +111,8 @@ const data = {
           <h1 className="text-3xl font-bold mb-4 text-right">حياة ذكية مع PulseGoal</h1>
           <div className="flex flex-col gap-4 w-full mb-6">
             {[
-              { icon: <CheckCircle className="text-green-600" />, label: "الأهداف المكتملة", value: "١٢ من ١٥" },
-              { icon: <BarChart className="text-blue-600" />, label: "تقدم الأسبوع", value: "٨٠٪" },
+              { icon: <Check className="text-green-600" />, label: "الأهداف المكتملة", value: "١٢ من ١٥" },
+              { icon: <PieChart className="text-blue-600" />, label: "تقدم الأسبوع", value: "٨٠٪" },
               { icon: <User className="text-yellow-600" />, label: "المستخدم", value: "مستخدم" },
             ].map((stat, i) => (
               <Card key={i} className="p-0 flex flex-row items-center gap-4">
@@ -236,3 +237,4 @@ const Index = () => (
 );
 
 export default Index;
+
