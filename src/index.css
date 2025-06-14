@@ -100,4 +100,11 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .no-focus-ring:focus,
+  .no-focus-ring:focus-visible,
+  .no-focus-ring:active {
+    outline: none !important;
+    box-shadow: none !important;
+  }
 }

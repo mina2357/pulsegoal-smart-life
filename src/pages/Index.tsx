@@ -213,7 +213,7 @@ function MainPage() {
           return (
             <Button
               variant={isActive ? "default" : "ghost"}
-              className={`flex flex-col items-center gap-0 px-2 py-1 text-xs ${isActive ? "text-primary" : ""}`}
+              className={`flex flex-col items-center gap-0 px-2 py-1 text-xs ${isActive ? "text-primary" : ""} no-focus-ring`}
               key={idx}
               tabIndex={0}
               aria-current={isActive ? "page" : undefined}
