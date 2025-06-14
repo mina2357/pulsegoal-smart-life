@@ -90,6 +90,49 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* Animated gradient background keyframes */
+  @keyframes gradient-move {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animated-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+      115deg,
+      #a5b4fc 0%,
+      #fbc2eb 25%,
+      #f9fafb 50%,
+      #fbc2eb 75%,
+      #a5b4fc 100%
+    );
+    background-size: 200% 200%;
+    animation: gradient-move 14s ease-in-out infinite;
+    opacity: 0.25;
+    transition: opacity 0.3s;
+  }
+
+  .dark .animated-bg {
+    background: linear-gradient(
+      115deg,
+      #6366f1 0%,
+      #9333ea 25%,
+      #0f172a 50%,
+      #9333ea 75%,
+      #6366f1 100%
+    );
+    opacity: 0.18;
+  }
 }
 
 @layer base {

@@ -194,11 +194,15 @@ function MainPage() {
   return (
     <div
       dir={dir}
-      className="min-h-screen bg-background flex flex-col justify-between items-center relative"
+      className="min-h-screen bg-background flex flex-col justify-between items-center relative overflow-hidden"
       style={{ fontFamily: "inherit" }}
     >
+      {/* Animated moving background - sits at the lowest z-index */}
+      <div aria-hidden="true" className="animated-bg" />
+
+      {/* All page content overlays above the background */}
       <LanguageSwitcher />
-      <div className="w-full max-w-md mx-auto flex-1 flex flex-col justify-center items-center pt-20 pb-8">
+      <div className="w-full max-w-md mx-auto flex-1 flex flex-col justify-center items-center pt-20 pb-8 z-10 relative">
         {
           // Render content based on the currently active section
           current.sections[activeSection]
