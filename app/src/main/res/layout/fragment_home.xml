@@ -1,0 +1,38 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/hello_user"
+        android:text="Welcome to PulseGoal!"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        android:textColor="@color/primary_dark"
+        android:fontFamily="sans-serif-medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/goal_brief"
+        android:text="You have 3 goals in progress."
+        android:layout_marginTop="8dp"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="@color/text_primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/ml_suggestion"
+        android:text="Today's tip: Stay consistent with your routines!"
+        android:background="@color/suggestion_bg"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:textColor="@color/primary_dark"
+        android:layout_marginTop="24dp"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
