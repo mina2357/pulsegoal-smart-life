@@ -41,14 +41,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="You have 3 active goals"
+                    android:text=""
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:textColor="@color/text_primary" />
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Today's Goals Section -->
+        <!-- Today's Goals Section (dynamic)-->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,105 +72,16 @@
                     android:fontFamily="sans-serif-medium"
                     android:layout_marginBottom="16dp" />
 
-                <!-- Goal Item 1 -->
                 <LinearLayout
+                    android:id="@+id/goals_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="12dp"
-                    android:gravity="center_vertical">
-
-                    <View
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:background="@color/goal_progress"
-                        android:layout_marginEnd="12dp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Exercise for 30 minutes"
-                        android:textAppearance="?attr/textAppearanceBody1"
-                        android:textColor="@color/text_primary" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="75%"
-                        android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="@color/goal_progress"
-                        android:fontFamily="sans-serif-medium" />
-
-                </LinearLayout>
-
-                <!-- Goal Item 2 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="12dp"
-                    android:gravity="center_vertical">
-
-                    <View
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:background="@color/accent"
-                        android:layout_marginEnd="12dp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Read 20 pages"
-                        android:textAppearance="?attr/textAppearanceBody1"
-                        android:textColor="@color/text_primary" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="40%"
-                        android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="@color/accent"
-                        android:fontFamily="sans-serif-medium" />
-
-                </LinearLayout>
-
-                <!-- Goal Item 3 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
-
-                    <View
-                        android:layout_width="12dp"
-                        android:layout_height="12dp"
-                        android:background="@color/primary"
-                        android:layout_marginEnd="12dp" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Meditate for 10 minutes"
-                        android:textAppearance="?attr/textAppearanceBody1"
-                        android:textColor="@color/text_primary" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="90%"
-                        android:textAppearance="?attr/textAppearanceBody2"
-                        android:textColor="@color/primary"
-                        android:fontFamily="sans-serif-medium" />
-
-                </LinearLayout>
+                    android:orientation="vertical"/>
 
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Progress Chart Section -->
+        <!-- Progress Chart Section (dynamic bar chart placeholder)-->
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -194,63 +105,13 @@
                     android:fontFamily="sans-serif-medium"
                     android:layout_marginBottom="16dp" />
 
-                <!-- Progress Chart Placeholder -->
                 <LinearLayout
+                    android:id="@+id/weekly_progress_chart"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
                     android:orientation="horizontal"
                     android:gravity="bottom"
-                    android:layout_marginBottom="8dp">
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="60dp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="4dp"
-                        android:background="@color/goal_progress" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="4dp"
-                        android:background="@color/accent" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="45dp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="4dp"
-                        android:background="@color/primary" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="95dp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="4dp"
-                        android:background="@color/goal_progress" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="70dp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="4dp"
-                        android:background="@color/accent" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="85dp"
-                        android:layout_weight="1"
-                        android:layout_marginEnd="4dp"
-                        android:background="@color/primary" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="100dp"
-                        android:layout_weight="1"
-                        android:background="@color/goal_progress" />
-
-                </LinearLayout>
+                    android:layout_marginBottom="8dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -366,7 +227,7 @@
                     android:id="@+id/ml_suggestion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Based on your progress, try breaking your larger goals into smaller, daily habits for better consistency!"
+                    android:text=""
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:textColor="@color/text_primary"
                     android:lineSpacingMultiplier="1.2" />
