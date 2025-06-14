@@ -1,10 +1,11 @@
-
 import React from "react";
 import { LanguageProvider, useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Card, CardContent } from "@/components/ui/card";
 import { Info, PieChart, Check, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import GoalsSection from "@/components/GoalsSection";
+import AccountSection from "@/components/AccountSection";
 
 // Example data for demo UI
 const data = {
@@ -45,50 +46,28 @@ const data = {
           <Card className="mb-4 w-full">
             <CardContent className="p-4 flex items-center gap-2">
               <Info className="text-purple-700" />
-              <span>Small achievements add up! Keep going.</span>
+              <span className="font-medium text-lg">
+                {/* Dynamic motivational message */}
+                {["Small achievements add up! Keep going.","You're making great progress today!","Every step counts – keep it up!"][Math.floor(Date.now() / 1000000) % 3]}
+              </span>
             </CardContent>
           </Card>
           <Card className="mb-2 w-full">
             <CardContent className="p-4">
               <div className="text-base text-left">
-                About PulseGoal: Effortless goal tracking and smart suggestions, designed to enhance your daily routine.
+                {/* Demo "recent achievements" (could be made dynamic if desired) */}
+                <div className="font-medium mb-1">Recent Achievement:</div>
+                <div className="mb-2 text-green-700">• Completed "Read for 20 minutes"</div>
+                <div className="text-muted-foreground">
+                  About PulseGoal: Effortless goal tracking and smart suggestions, designed to enhance your daily routine.
+                </div>
               </div>
             </CardContent>
           </Card>
         </>
       ),
-      goals: (
-        <div className="w-full">
-          <h2 className="text-2xl font-bold mb-4 text-left">Goals</h2>
-          <Card className="mb-4">
-            <CardContent className="p-4">
-              <div>
-                Here you can view, add, and track your goals.
-                <br />
-                <span className="block mt-2 text-sm text-muted-foreground">
-                  (Demo: No backend yet. UI only.)
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      ),
-      account: (
-        <div className="w-full">
-          <h2 className="text-2xl font-bold mb-4 text-left">Account</h2>
-          <Card className="mb-4">
-            <CardContent className="p-4">
-              <div>
-                Account settings and user information.
-                <br />
-                <span className="block mt-2 text-sm text-muted-foreground">
-                  (Demo: No editing functionality yet.)
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      ),
+      goals: <GoalsSection />,
+      account: <AccountSection />,
     }
   },
   ar: {
@@ -127,50 +106,27 @@ const data = {
           <Card className="mb-4 w-full">
             <CardContent className="p-4 flex items-center gap-2">
               <Info className="text-purple-700" />
-              <span>الإنجازات الصغيرة تصنع الفارق! استمر.</span>
+              <span className="font-medium text-lg">
+                {/* Dynamic motivational: Arabic translations */}
+                {["الإنجازات الصغيرة تصنع الفارق! استمر.","تقدم رائع اليوم!","كل خطوة مهمة – واصل!"][Math.floor(Date.now() / 1000000) % 3]}
+              </span>
             </CardContent>
           </Card>
           <Card className="mb-2 w-full">
             <CardContent className="p-4">
               <div className="text-base text-right">
-                حول PulseGoal: تتبع الأهداف واقتراحات ذكية بسهولة لتعزيز روتينك اليومي.
+                <div className="font-medium mb-1">إنجاز حديث:</div>
+                <div className="mb-2 text-green-700">• أكملت "قراءة لمدة ٢٠ دقيقة"</div>
+                <div className="text-muted-foreground">
+                  حول PulseGoal: تتبع الأهداف واقتراحات ذكية بسهولة لتعزيز روتينك اليومي.
+                </div>
               </div>
             </CardContent>
           </Card>
         </>
       ),
-      goals: (
-        <div className="w-full">
-          <h2 className="text-2xl font-bold mb-4 text-right">الأهداف</h2>
-          <Card className="mb-4">
-            <CardContent className="p-4">
-              <div>
-                هنا يمكنك عرض وإضافة وتتبع أهدافك.
-                <br />
-                <span className="block mt-2 text-sm text-muted-foreground">
-                  (عرض تجريبي: لا توجد قاعدة بيانات بعد. واجهة فقط.)
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      ),
-      account: (
-        <div className="w-full">
-          <h2 className="text-2xl font-bold mb-4 text-right">الحساب</h2>
-          <Card className="mb-4">
-            <CardContent className="p-4">
-              <div>
-                إعدادات الحساب ومعلومات المستخدم.
-                <br />
-                <span className="block mt-2 text-sm text-muted-foreground">
-                  (عرض تجريبي: لا توجد إمكانية تعديل بعد.)
-                </span>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      ),
+      goals: <GoalsSection />,
+      account: <AccountSection />,
     }
   }
 };
@@ -241,4 +197,3 @@ const Index = () => (
 );
 
 export default Index;
-
