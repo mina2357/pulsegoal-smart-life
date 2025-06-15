@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { User } from "lucide-react";
+import { useAccount } from "@/contexts/AccountContext";
 
 const DUMMY_USER = {
   name: "PulseGoal User",
@@ -10,9 +10,9 @@ const DUMMY_USER = {
 };
 
 const AccountSection: React.FC = () => {
-  const [user, setUser] = useState(DUMMY_USER);
+  const { user, setUser } = useAccount();
   const [editing, setEditing] = useState(false);
-  const [fields, setFields] = useState(DUMMY_USER);
+  const [fields, setFields] = useState(user);
 
   const startEdit = () => {
     setEditing(true);

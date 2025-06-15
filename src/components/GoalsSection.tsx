@@ -1,8 +1,8 @@
-
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Plus, CheckCircle, Trash2 } from "lucide-react";
+import { useGoals } from "@/contexts/GoalsContext";
 
 type Goal = {
   id: number;
@@ -17,28 +17,13 @@ const initialGoals: Goal[] = [
 ];
 
 const GoalsSection: React.FC = () => {
-  const [goals, setGoals] = useState<Goal[]>(initialGoals);
+  const { goals, addGoal, toggleGoal, deleteGoal } = useGoals();
   const [input, setInput] = useState("");
 
   const handleAdd = () => {
     if (!input.trim()) return;
-    setGoals([
-      ...goals,
-      { id: Date.now(), text: input.trim(), completed: false },
-    ]);
+    addGoal(input.trim());
     setInput("");
-  };
-
-  const handleToggle = (id: number) => {
-    setGoals(goals =>
-      goals.map(goal =>
-        goal.id === id ? { ...goal, completed: !goal.completed } : goal
-      )
-    );
-  };
-
-  const handleDelete = (id: number) => {
-    setGoals(goals => goals.filter(goal => goal.id !== id));
   };
 
   return (
@@ -73,14 +58,14 @@ const GoalsSection: React.FC = () => {
             {goals.map(goal => (
               <li
                 key={goal.id}
-                className={`flex items-center gap-3 py-2 px-2 rounded group ${
+                className={`flex items-center gap-3 py-2 px-2 rounded group transition-all duration-300 ${
                   goal.completed
                     ? "bg-green-50 dark:bg-green-900/30 line-through text-green-700 dark:text-green-300"
                     : "bg-accent/30 dark:bg-accent/20"
                 }`}
               >
                 <button
-                  onClick={() => handleToggle(goal.id)}
+                  onClick={() => toggleGoal(goal.id)}
                   aria-label={goal.completed ? "Mark as incomplete" : "Mark as complete"}
                   className="text-lg p-1 rounded hover:bg-green-100 dark:hover:bg-green-900/50 transition"
                   type="button"
@@ -92,7 +77,7 @@ const GoalsSection: React.FC = () => {
                 </button>
                 <span className="flex-1">{goal.text}</span>
                 <button
-                  onClick={() => handleDelete(goal.id)}
+                  onClick={() => deleteGoal(goal.id)}
                   aria-label="Delete goal"
                   className="text-red-500 hover:text-red-700 p-1"
                   type="button"
