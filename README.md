@@ -1,48 +1,46 @@
-<h1 align="center">🚀 MinaDev AI App</h1>
 <p align="center">
-  <b>A modern React + Tailwind + shadcn-ui app built for fast, creative UI development</b><br>
-  <i>Designed and customized by MinaDev, generated initially with ❤️ using Lovable.dev</i>
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" width="100" alt="AI Project Logo" />
+</p>
+
+<h1 align="center">AndroForge AI Interface</h1>
+
+<p align="center">
+  <i>Modern frontend powered by React, Vite, and Tailwind — enhanced by AI capabilities.</i>
 </p>
 
 <p align="center">
-  <img src="screenshots/demo.png" width="700" alt="App Screenshot"/>
+  <img src="https://img.shields.io/badge/Vite-FEDE00?style=for-the-badge&logo=vite&logoColor=purple" />
+  <img src="https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react&logoColor=61dafb" />
+  <img src="https://img.shields.io/badge/Tailwind-38BDF8?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/shadcn--ui-000?style=for-the-badge" />
 </p>
 
 ---
 
-## 🛠️ Tech Stack
+## 🚀 Project Info
 
-- ⚡️ Vite — lightning-fast build tool  
-- 💡 TypeScript — typed JavaScript for better safety  
-- ⚛️ React — component-based UI library  
-- 🎨 Tailwind CSS — utility-first CSS framework  
-- 🧱 shadcn/ui — beautiful UI components
+🔗 **Live Project**:  
+[https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77)
 
 ---
 
-## ✏️ How to Edit / Contribute
+## 🧠 How to Edit
 
-You can work with this project in **multiple ways**:
+### 🔹 Use Lovable (No Code)
+Visit the [Lovable Project](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77) and start prompting.  
+Changes are synced to GitHub automatically.
 
-### 🧠 1. [Via Lovable.dev](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77)
-
-Lovable is a prompt-based editor that allows rapid AI-assisted development.  
-You can continue editing this project [on Lovable here](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77).  
-All changes will sync automatically with this repository.
-
----
-
-### 🖥️ 2. Locally (recommended for developers)
+### 🔹 Use Your IDE (Local Development)
 
 ```bash
-# Clone the repo
-git clone https://github.com/minadev/your-repo-name.git
+# Step 1: Clone the repo
+git clone <YOUR_GIT_URL>
 
-# Go to project directory
-cd your-repo-name
+# Step 2: Navigate
+cd <YOUR_PROJECT_NAME>
 
-# Install dependencies
+# Step 3: Install dependencies
 npm install
 
-# Start the dev server
+# Step 4: Run the dev server
 npm run dev
