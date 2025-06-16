@@ -1,73 +1,48 @@
-# Welcome to your Lovable project
+<h1 align="center">🚀 MinaDev AI App</h1>
+<p align="center">
+  <b>A modern React + Tailwind + shadcn-ui app built for fast, creative UI development</b><br>
+  <i>Designed and customized by MinaDev, generated initially with ❤️ using Lovable.dev</i>
+</p>
 
-## Project info
+<p align="center">
+  <img src="screenshots/demo.png" width="700" alt="App Screenshot"/>
+</p>
 
-**URL**: https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77
+---
 
-## How can I edit this code?
+## 🛠️ Tech Stack
 
-There are several ways of editing your application.
+- ⚡️ Vite — lightning-fast build tool  
+- 💡 TypeScript — typed JavaScript for better safety  
+- ⚛️ React — component-based UI library  
+- 🎨 Tailwind CSS — utility-first CSS framework  
+- 🧱 shadcn/ui — beautiful UI components
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77) and start prompting.
+## ✏️ How to Edit / Contribute
 
-Changes made via Lovable will be committed automatically to this repo.
+You can work with this project in **multiple ways**:
 
-**Use your preferred IDE**
+### 🧠 1. [Via Lovable.dev](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Lovable is a prompt-based editor that allows rapid AI-assisted development.  
+You can continue editing this project [on Lovable here](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77).  
+All changes will sync automatically with this repository.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+### 🖥️ 2. Locally (recommended for developers)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+```bash
+# Clone the repo
+git clone https://github.com/minadev/your-repo-name.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Go to project directory
+cd your-repo-name
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the dev server
 npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
