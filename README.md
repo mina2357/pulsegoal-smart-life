@@ -5,7 +5,7 @@
 <h1 align="center">AndroForge AI Interface</h1>
 
 <p align="center">
-  <i>Modern frontend powered by React, Vite, and Tailwind — enhanced by AI capabilities.</i>
+  <i>AI-enhanced user experience with modern frontend technologies.</i>
 </p>
 
 <p align="center">
@@ -17,30 +17,29 @@
 
 ---
 
-## 🚀 Project Info
+## 📌 Project Overview
 
-🔗 **Live Project**:  
-[https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77)
+This project is built and maintained by **MinaDev** as part of the AndroForge platform.  
+It integrates AI-powered interactions with a modern frontend stack for tech-savvy Android users and developers.
 
 ---
 
-## 🧠 How to Edit
+## 🛠️ Tech Stack
 
-### 🔹 Use Lovable (No Code)
-Visit the [Lovable Project](https://lovable.dev/projects/13245d31-324e-4c7c-9aa5-bfeb90cacc77) and start prompting.  
-Changes are synced to GitHub automatically.
+- ⚡ Vite – next-gen frontend tooling
+- ⚛️ React – component-based UI
+- 🎨 Tailwind CSS – utility-first styling
+- 🧱 shadcn-ui – accessible and flexible UI components
+- 🧠 AI integrations – optional prompts / assistant-ready logic
 
-### 🔹 Use Your IDE (Local Development)
+---
+
+## 💡 Usage & Development
+
+### Clone & Run Locally
 
 ```bash
-# Step 1: Clone the repo
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install dependencies
+git clone https://github.com/<your-username>/<your-repo>.git
+cd <your-repo>
 npm install
-
-# Step 4: Run the dev server
 npm run dev
